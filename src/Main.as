@@ -1,26 +1,26 @@
-package 
+package
 {
 	import flash.display.Sprite;
 	import flash.events.Event;
+  import org.flixel.FlxGame;
 
 	/**
 	 * ...
 	 * @author Rafael Wenzel
 	 */
-	[Frame(factoryClass="Preloader")]
-	public class Main extends Sprite 
+	//[Frame(factoryClass="Preloader")]
+	public dynamic class Main extends FlxGame
 	{
 
-		public function Main():void 
+		public function Main():void
 		{
-			if (stage) init();
-			else addEventListener(Event.ADDED_TO_STAGE, init);
+      super( 320, 240, Game, 2 );
+      addEventListener( Event.ADDED_TO_STAGE, init );
 		}
 
-		private function init(e:Event = null):void 
+		private function init(e:Event = null):void
 		{
-			removeEventListener(Event.ADDED_TO_STAGE, init);
-			// entry point
+      stage.addChild( this );
 		}
 
 	}
