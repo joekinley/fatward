@@ -20,6 +20,21 @@ package
     public static const TILE_FLOOR_RED:int = 15;
 
     public static const TILE_ENEMIES_JOHNNY:int = 18; // enemy indicator johnny
+    public static const TILE_ENEMIES_JOHNNY2:int = 93; // enemy johnny place 2
+    public static const TILE_ENEMIES_JOHNNY3:int = 94; // enemy johnny place 3
+    public static const TILE_ENEMIES_JOHNNY4:int = 95; // enemy johnny place 4
+    public static const TILE_ENEMIES_JOHNNY5:int = 96; // enemy johnny place 5
+    public static const TILE_ENEMIES_JOHNNY6:int = 101; // enemy johnny place 6
+
+    public static const TILE_ENEMIES_EMILY:int = 20; // enemy indicator emily
+    public static const TILE_ENEMIES_EMILY2:int = 97; // enemy emily place 2
+    public static const TILE_ENEMIES_EMILY3:int = 98; // enemy emily place 3
+    public static const TILE_ENEMIES_EMILY4:int = 99; // enemy emily place 4
+    public static const TILE_ENEMIES_EMILY5:int = 100; // enemy emily place 5
+    public static const TILE_ENEMIES_EMILY6:int = 102; // enemy emily place 6
+
+    public static const TILE_BALLOON:int = 58; // BALLOON
+    public static const TILE_KITTEN:int = 59; // KITTEN
 
     public static const TILE_DOOR_1:int = 42; // DOOR 1 TILE
     public static const TILE_DOOR_2:int = 46; // DOOR 2 TILE
@@ -56,6 +71,8 @@ package
     [Embed(source = '../assets/graphics/objects.png')] public static const IMG_OBJECTS:Class;
     [Embed(source = '../assets/graphics/showlight.png')] public static const IMG_SHOWLIGHTS:Class;
     [Embed(source = '../assets/graphics/filter_2.png')] public static const IMG_FILTER:Class;
+    [Embed(source = '../assets/graphics/title.png')] public static const IMG_TITLE:Class;
+    [Embed(source = '../assets/music/LS22.mp3')] public static const ASS_MUSIC:Class;
 
 
     public static const LVLS_MAIN:int = 0; // index in map array for that level
@@ -180,7 +197,10 @@ package
       0x00F900, // 56 DOOR 7
       0x00F800, // 57 DOOR 8
 
-      0, 0, 0, 0, 0, 0, 0, // 58 - 64
+      0xFFFA00, // 58 BALLOON
+      0xFFF900, // 59 KITTEN
+
+      0, 0, 0, 0, 0, // 60 - 64
 
       0xFFFB00, // 65 PLANT BOTTOM
 
@@ -198,6 +218,18 @@ package
       0x0000F6, // 90 TRIGGER 6C
       0x0000F5, // 91 TRIGGER 6D
       0x0000F4, // 92 TRIGGER FINAL
+
+      0xFB0000, // 93 JOHNNY PLACE 2
+      0xFA0000, // 94 JOHNNY PLACE 3
+      0xF90000, // 95 JOHNNY PLACE 4
+      0xF80000, // 96 JOHNNY PLACE 5
+
+      0xF70000, // 97 EMILY PLACE 2
+      0xF60000, // 98 EMILY PLACE 3
+      0xF50000, // 99 EMILY PLACE 4
+      0xF40000, // 100 EMILY PLACE 5
+      0xF30000, // 101 JOHNNY PLACE 6
+      0xF20000, // 102 EMILY PLACE 6
       0
     );
   }

@@ -14,7 +14,7 @@ package
 
 		public function Main():void
 		{
-      super( 320, 240, Game, 2 );
+      super( 320, 240, Menu, 2 );
       addEventListener( Event.ADDED_TO_STAGE, init );
 		}
 

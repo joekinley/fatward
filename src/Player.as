@@ -57,16 +57,16 @@ package
       this.velocity.y = 0;
 
       // movement
-      if ( FlxG.keys.LEFT ) {
+      if ( FlxG.keys.LEFT || FlxG.keys.A ) {
         this.facing = FlxObject.LEFT;
         this.velocity.x = -Globals.PLAYER_SPEED;
-      } else if ( FlxG.keys.RIGHT ) {
+      } else if ( FlxG.keys.RIGHT || FlxG.keys.D ) {
         this.facing = FlxObject.RIGHT;
         this.velocity.x = Globals.PLAYER_SPEED;
-      } else if ( FlxG.keys.UP ) {
+      } else if ( FlxG.keys.UP || FlxG.keys.W ) {
         this.facing = FlxObject.UP;
         this.velocity.y = -Globals.PLAYER_SPEED;
-      } else if ( FlxG.keys.DOWN ) {
+      } else if ( FlxG.keys.DOWN || FlxG.keys.S ) {
         this.facing = FlxObject.DOWN;
         this.velocity.y = Globals.PLAYER_SPEED;
       }
