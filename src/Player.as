@@ -11,9 +11,13 @@ package
   {
     private var Image:Class;
 
+    private var dead:Boolean;
+
     public function Player( )
     {
       super( );
+
+      this.dead = false;
 
       //this.x = x;
       //this.y = y;
@@ -35,6 +39,7 @@ package
       addAnimation( 'walk_up', [8, 9], Globals.PLAYER_ANIMATION_SPEED );
       addAnimation( 'walk_right', [10, 11], Globals.PLAYER_ANIMATION_SPEED );
       addAnimation( 'walk_left', [12, 13], Globals.PLAYER_ANIMATION_SPEED );
+      addAnimation( 'die', [28, 29, 30, 31, 32], 1, false );
     }
 
     override public function update( ):void {
@@ -45,6 +50,8 @@ package
     }
 
     public function handleMovement( ):void {
+
+      if ( this.dead ) return;
 
       this.velocity.x = 0;
       this.velocity.y = 0;
@@ -67,6 +74,8 @@ package
 
     public function handleAnimation( ):void {
 
+      if ( this.dead ) return;
+
       // handle animation
       if ( this.velocity.x != 0 ) {
         if ( this.facing == FlxObject.LEFT ) play( 'walk_left' );
@@ -86,6 +95,11 @@ package
           case FlxObject.RIGHT: play( 'idle_right' ); break;
         }
       }
+    }
+
+    public function die( ):void {
+      this.dead = true;
+      this.play( 'die' );
     }
 
   }
